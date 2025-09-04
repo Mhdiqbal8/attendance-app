@@ -97,6 +97,12 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    {{-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQYjithmKOFhcw_Xqfqv357JyWFDZ2m8w&libraries=maps,marker"
+    defer></script> --}}
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQYjithmKOFhcw_Xqfqv357JyWFDZ2m8w&loading=async&libraries=maps&v=beta" defer>
+</script>
     <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 

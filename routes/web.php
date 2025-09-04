@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\ManajemenKaryawanController;
+use App\Http\Controllers\Employee;
 use App\Http\Controllers\ManagePositionController;
+use App\Http\Controllers\ManageDevision;
+use App\Http\Controllers\Locations;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +21,15 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/employee', [ManajemenKaryawanController::class, 'index'])->name('employee.index');
-Route::get('/employee/create', [ManajemenKaryawanController::class, 'create'])->name('employee.create');
+Route::resource('employee', Employee::class);
+// Route::get('/employee', Employee::class)->name('employee.index');
+// Route::get('/employee/create', [ManajemenKaryawanController::class, 'create'])->name('employee.create');
 
 Route::get('/position', [ManagePositionController::class, 'index'])->name('position.index');
 Route::get('/position/create', [ManagePositionController::class, 'create'])->name('position.create');
+
+Route::get('/devision', [ManageDevision::class, 'index'])->name('devision.index');
+// Route::get('/position/create', [ManagePositionController::class, 'create'])->name('position.create');
+
+Route::get('/location', [Locations::class, 'index'])->name('location.index');
+// Route::get('/position/create', [ManagePositionController::class, 'create'])->name('position.create');

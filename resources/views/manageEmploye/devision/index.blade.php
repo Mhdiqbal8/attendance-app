@@ -1,11 +1,18 @@
 @extends('layouts.app')
 @section('title') Data Karyawan @endsection
 @section('content')
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Position</h1>
+<div class="d-flex align-items-center justify-content-between mb-4">
+    {{-- <h1 class="h3 mb-0 text-gray-800">Devision</h1> --}}
+    <nav aria-label="breadcrumb my-0">
+        <ol class="breadcrumb mt-0 py-2 bg-none">
+          <li class="breadcrumb-item"><a href="#">Devision</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
     
     <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm py-2 px-3" data-toggle="modal" data-target="#modalAddPosition">
-      <i class="fas fa-plus fa-sm text-white-50"></i> Add Position </button>
+      <i class="fas fa-plus fa-sm text-white-50"></i> Add Devision 
+    </button>
 </div>
 
 <div class="card mb-4">
@@ -28,15 +35,19 @@
               <thead class="thead-light">
               <tr>
                   <th>No</th>
-                  <th>Position</th>
-                  <th>Attendance Targets</th>
+                  <th>Name</th>
+                  <th>Supervisor</th>
+                  <th>Late Penalty</th>
+                  <th>Number of Employee</th>
                   <th>Action</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                   <td>1</td>
-                  <td>Accounting Staff</td>
+                  <td>Shift</td>
+                  <td>-</td>
+                  <td>-</td>
                   <td>-</td>
                   <td>
                     {{-- Look Data --}}

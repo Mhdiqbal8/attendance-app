@@ -1,11 +1,18 @@
 @extends('layouts.app')
 @section('title') Data Karyawan @endsection
 @section('content')
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Position</h1>
+<div class="d-flex align-items-center justify-content-between mb-4">
+    {{-- <h1 class="h3 mb-0 text-gray-800">Devision</h1> --}}
+    <nav aria-label="breadcrumb my-0">
+        <ol class="breadcrumb mt-0 py-2 bg-none">
+          <li class="breadcrumb-item"><a href="#">Location</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
     
     <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm py-2 px-3" data-toggle="modal" data-target="#modalAddPosition">
-      <i class="fas fa-plus fa-sm text-white-50"></i> Add Position </button>
+      <i class="fas fa-plus fa-sm text-white-50"></i> Add location 
+    </button>
 </div>
 
 <div class="card mb-4">
@@ -28,16 +35,20 @@
               <thead class="thead-light">
               <tr>
                   <th>No</th>
-                  <th>Position</th>
-                  <th>Attendance Targets</th>
+                  <th>Location</th>
+                  <th>Radius (Meter)</th>
+                  <th>Assigned Employees</th>
                   <th>Action</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                   <td>1</td>
-                  <td>Accounting Staff</td>
-                  <td>-</td>
+                  <td>Kantor Cabang</td>
+                  <td>10</td>
+                  <td>
+                    <span class="badge badge-primary">All Employee</span>
+                  </td>
                   <td>
                     {{-- Look Data --}}
                     <a href="#" class="btn btn-sm btn-info">
@@ -66,7 +77,7 @@
     <div class="modal-dialog modal-lg " role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalAddPosition">Add Position</h5>
+          <h5 class="modal-title" id="modalAddPosition">Add Location</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -74,19 +85,18 @@
         <div class="modal-body">
           <form action="">
             <div class="form-group row">
-              <label for="inputPassword" class="col-sm-3 col-form-label">Name</label>
+              {{-- <div class="col-sm-9"> --}}
+                <gmp-map class="mx-2 rounded" center="-6.283134681631828, 106.70887203370269" zoom="10" map-id="DEMO_MAP_ID" style="height: 300px; width: 100%;"></gmp-map>
+              {{-- </div> --}}
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-3 col-form-label">Loaction Name</label>
               <div class="col-sm-9">
                 <input type="input" class="form-control">
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputPassword" class="col-sm-3 col-form-label">Parent</label>
-              <div class="col-sm-9">
-                <input type="input" class="form-control">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputPassword" class="col-sm-3 col-form-label">Attendance Target</label>
+              <label for="inputPassword" class="col-sm-3 col-form-label">Radius (Meter)</label>
               <div class="col-sm-9">
                 <input type="input" class="form-control">
               </div>
@@ -100,4 +110,5 @@
       </div>
     </div>
   </div>
+
 @endsection

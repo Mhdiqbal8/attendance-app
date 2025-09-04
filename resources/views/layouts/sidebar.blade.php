@@ -18,9 +18,9 @@
 {{-- <hr class="sidebar-divider"> --}}
 
 <!-- Heading -->
-<div class="sidebar-heading">
+{{-- <div class="sidebar-heading">
     Menus
-</div>
+</div> --}}
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
     <a class="nav-link" href="/">
@@ -37,10 +37,11 @@
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="">Manajemen Divisi</a>
+            <a class="collapse-item" href="/devision">Manajemen Divisi</a>
             <a class="collapse-item" href="/position">Manajemen Position</a>
             <a class="collapse-item" href="/employee">Data Karyawan</a>
             <a class="collapse-item" href="">Manajemen Absensi</a>
+            <a class="collapse-item" href="/location">Attendance Location</a>
         </div>
     </div>
 </li>
