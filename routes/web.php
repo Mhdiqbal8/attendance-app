@@ -22,8 +22,6 @@ Route::get('/', function () {
 });
 
 Route::resource('employee', Employee::class);
-// Route::get('/employee', Employee::class)->name('employee.index');
-// Route::get('/employee/create', [ManajemenKaryawanController::class, 'create'])->name('employee.create');
 
 Route::get('/position', [ManagePositionController::class, 'index'])->name('position.index');
 Route::get('/position/create', [ManagePositionController::class, 'create'])->name('position.create');
